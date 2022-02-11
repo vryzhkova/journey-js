@@ -3,16 +3,16 @@ import declOfNum from "./declOfNum.js";
 
 const createCockpit = (titleText) => {
     const cockpit = createElement('div', {
-        clasName: 'cockpit',
+        className: 'cockpit',
     });
 
     const title = createElement('h1', {
-        clasName: 'cockpit-title',
+        className: 'cockpit-title',
         textContent: titleText,
     });
 
     const button = createElement('button', {
-        clasName: 'cockpit-confirm',
+        className: 'cockpit-confirm',
         type: 'submit',
         textContent: 'Подтвердить',
     });
@@ -73,11 +73,11 @@ const createBlockSeat = (n, count) => {
 const createAirplane = (title, tourData) => {
     const scheme = tourData.scheme;
     const choisesSeat = createElement('form', {
-        clasName: 'choises-seat',
+        className: 'choises-seat',
     });
 
     const plane = createElement('fieldset', {
-        clasName: 'plane',
+        className: 'plane',
         name: 'plane',
     });
 
@@ -112,7 +112,7 @@ const checkSeat = (form, data) => {
         if(checked.length === data.length) {
             [...form].forEach(item => {
                 if(item.checked === false && item.name === 'seat') {
-                    item.disabled === true;
+                    item.disabled = true;
                 }
             })
         }
